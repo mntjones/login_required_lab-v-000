@@ -1,4 +1,5 @@
 class SecretsController < ApplicationController
+  before_action 
   
   def show
     if !session[:name]
