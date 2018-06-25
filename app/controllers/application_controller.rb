@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   end
   
   def hello
-    
+    if current_user
   end
 end
