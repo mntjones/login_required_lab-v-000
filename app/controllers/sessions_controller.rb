@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   
   def create
     if params[:name].empty? || params[:name].nil?
-      redirect_to (controller: 'sessions', action: 'new')
+      redirect_to :new
     else
       session[:name] = params[:name]
       redirect_to (controller: 'secrets', action: 'show')
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   
   def destroy
     session.delete :name
-    redirect_to (controller: 'sessions', action: 'new')
+    redirect_to :new
   end
     
 end
