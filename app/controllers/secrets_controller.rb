@@ -1,7 +1,7 @@
 class SecretsController < ApplicationController
   def show
     if !session[:name]
-      redirect_to (controller: 'sessions', action: 'new')
+      redirect_to :'sessions/new'
     else
       :show
     end
