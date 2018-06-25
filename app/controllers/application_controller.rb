@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def current_user
     session[:name]
   end
+  
+  def hello
+    
+  end
 end
