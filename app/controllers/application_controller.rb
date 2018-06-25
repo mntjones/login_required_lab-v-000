@@ -8,7 +8,10 @@ class ApplicationController < ActionController::Base
   end
   
   def hello
-    if current_user
+    if !current_user
       redirect_to controller: 'sessions', action: 'new'
+    else
+      '/'
+    end
   end
 end
