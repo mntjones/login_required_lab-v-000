@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       redirect_to :new
     else
       session[:name] = params[:name]
-      redirect_to  :action=>"show", :controller=>"secrets"
+      redirect_to controller: 'application', action: 'hello'
     end
   end
   
