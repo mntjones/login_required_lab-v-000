@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   
   def create
     if session[:name].empty? || session[:name].nil?
-      redirect_to {}
+      redirect_to (controller: 'sessions', action: 'new')
   end
   
   def destroy
