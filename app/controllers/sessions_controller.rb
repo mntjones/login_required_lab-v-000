@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   
   def create
     if params[:name].empty? || !params[:name]
-      redirect_to :new
+      erb: :new
     else
       session[:name] = params[:name]
       redirect_to controller: 'application', action: 'hello'
