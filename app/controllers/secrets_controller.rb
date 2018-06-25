@@ -5,8 +5,8 @@ class SecretsController < ApplicationController
     
   end
   
+  
   private
- 
   def require_login
     redirect_to :action=>"new", :controller=>"sessions" unless current_user
   end
