@@ -1,13 +1,12 @@
 <h1>Hello, <%= session[:name] %>.</h1>
 
 <p>See Secret</p>
-
+<%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+  <input type=submit value='logout'>
+<% end %>
 
 <p>Logout</p>
 <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
   <input type=submit value='logout'>
 <% end %>
 
-<%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
-  <input type=submit value='logout'>
-<% end %>
