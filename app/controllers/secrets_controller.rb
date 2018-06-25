@@ -8,4 +8,10 @@ class SecretsController < ApplicationController
       redirect_to :action=>"show", :controller=>"secrets"
     end
   end
+  
+  private
+ 
+  def require_login
+    return head(:forbidden) unless session.include? :user_id    
+  end
 end
