@@ -9,5 +9,6 @@ class ApplicationController < ActionController::Base
   
   def hello
     if current_user
+      redirect_to controller: 'sessions', action: 'new'
   end
 end
