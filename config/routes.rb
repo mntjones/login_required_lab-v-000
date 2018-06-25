@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   get 'secret' => 'secrets#show'
 
-  #root 'application#hello'
+  root 'application#hello'
 end
