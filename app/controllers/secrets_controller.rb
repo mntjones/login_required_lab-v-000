@@ -3,7 +3,7 @@ class SecretsController < ApplicationController
     if !session[:name]
       redirect_to :'sessions/new'
     else
-      :show
+      redirect_to :action=>"show", :controller=>"secrets"
     end
   end
 end
