@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     if !current_user
       redirect_to controller: 'sessions', action: 'new'
     else
-      '/'
+      :hello
     end
   end
 end
